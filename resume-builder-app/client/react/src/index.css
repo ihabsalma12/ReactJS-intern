@@ -1,0 +1,229 @@
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+/* source: https://www.w3docs.com/learn-html/html-form-templates.html */
+html,
+body {
+  display: flex;
+  justify-content: center;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 15px;
+}
+
+form {
+  border: 5px solid #f1f1f1;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 16px 8px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button,
+input[type='submit'] {
+  /* background-color: #8ebf42; */
+  /* color: white; */
+  /* padding: 14px 0; */
+  /* margin: 10px 0; */
+  border: none;
+  cursor: pointer;
+  /* width: 100%; */
+}
+
+button.submit,
+input[type='submit'] {
+  background-color: #8ebf42;
+  color: white;
+  padding: 14px 0;
+  margin: 10px 0;
+  /* border: none; */
+  /* cursor: grabbing; */
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 18;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.formcontainer {
+  text-align: left;
+  margin: 24px 50px 12px;
+}
+
+.container {
+  padding: 16px 0;
+  text-align: left;
+}
+
+/* span.psw {
+  float: right;
+  padding-top: 0;
+  padding-right: 15px;
+} */
+/* source = https://novu.co/blog/creating-a-resume-builder-with-react-nodejs-and-ai/ */
+/* #photo {
+  width: 50%;
+} */
+
+.nestedContainer {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  justify-content: left;
+  gap: 10px;
+  width: 100%;
+}
+
+.companies {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+
+
+#addBtn {
+  color: white;
+  background-color: green;
+  margin-right: 5px;
+  padding: 10px;
+  /* margin: 10px 0; */
+
+}
+
+#deleteBtn {
+  color: white;
+  background-color: red;
+  margin-right: 5px;
+  padding: 10px;
+}
+
+
+.resume-container {
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.resume-header {
+  /* width: 80%; */
+  margin: 0 auto;
+  min-height: 10vh;
+  background-color: #e8e2e2;
+  padding: 30px;
+  border-radius: 3px 3px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.resume-title {
+  opacity: 0.6;
+}
+
+.header-title {
+  /* margin-bottom: 15px; */
+}
+
+.resume-image {
+  vertical-align: middle;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.resume-body {
+  /* width: 80%; */
+  margin: 0 auto;
+  padding: 30px;
+  min-height: 80vh;
+  border: 1px solid #e0e0ea;
+}
+
+.resume-body-title {
+  margin-bottom: 5px;
+}
+
+.resume-body-content {
+  text-align: justify;
+  margin-bottom: 30px;
+}

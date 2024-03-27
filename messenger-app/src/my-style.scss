@@ -1,0 +1,518 @@
+/* define variables for the primary colors */
+$white: white;
+$purple1: #b51963; //white text
+$pink1: #e6308a;
+$dark-purple: #91144f;
+$dark-pink: #cf2b7c;
+// $dark-purple2: #a31759;
+$blue: #0073e6; //white text
+$dark-blue1: #0051a1;
+$dark-blue2: #002245;
+$green1: #89ce00;
+$green2: #5ba300;
+$light-grey: #d9d9d9;
+$black: black;
+
+// @import '~react-router-dom';
+
+// /* Shared styles for inputs and selects */
+// input[type="text"],
+// input[type="email"],
+// input[type="password"],
+// select {
+//     width: 100%;
+//     padding: 12px 20px;
+//     margin: 8px 0;
+//     display: inline-block;
+//     border: 1px solid $light_pink;
+//     border-radius: 4px;
+//     box-sizing: border-box;
+//     font-weight: bold;
+//     font-size: 24px;
+// }
+
+// /* Button styles */
+// input[type="submit"],
+// button {
+//     width: 100%;
+//     padding: 14px 20px;
+//     margin: 8px 0;
+//     border: none;
+//     border-radius: 4px;
+//     cursor: pointer;
+//     font-weight: bold;
+//     font-size: 24px;
+// }
+
+// input[type="submit"] {
+//     background-color: $green;
+//     color: $light_pink;
+// }
+
+// button {
+//     background-color: $blue;
+//     color: $light_pink;
+// }
+
+// /* Hover styles for buttons */
+// input[type="submit"]:hover,
+// button:hover {
+//     background-color: $green;
+// }
+
+body {
+    color: $black;
+    font-size: 20px;
+}
+
+@mixin form-styling($background-color) {
+
+    /* Form container */
+    .form-container {
+        background-color: $white;
+        display: flex; //full screen
+        justify-content: center; //center horizontally
+        align-items: center; //center vertically
+        height: 100vh; // Full height of the viewport
+
+        /* Form wrapper */
+        .form-wrapper {
+            background-color: $background-color;
+            padding: 20px 60px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+
+            .title {
+                color: $white;
+                font-weight: bold;
+                font-size: 48px;
+
+            }
+
+            .subtitle {
+                color: $white;
+                // font-weight: bold;
+                font-size: 32px;
+                margin-bottom: 15px;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                input {
+                    width: 100%;
+                    padding: 6px 10px;
+                    // margin: 8px 0;
+                    display: inline-block;
+                    border: 1px solid $black;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    // font-weight: bold;
+                    font-size: 20px;
+                }
+
+                .password-input-wrapper {
+                    display: flex;
+                    align-items: center;
+
+                    .repeat-pass {
+                        flex: 5;
+                        // padding: 6px 10px;
+                    }
+
+                    input[type="checkbox"] {
+                        flex: 1;
+                        /* Adjust flex value as needed */
+                    }
+
+                    label {
+                        font-size: 16px;
+                        color: $white;
+                    }
+                }
+
+                .wrong {
+                    font-size: 16px;
+
+                    // padding-left: 5px;
+                    // margin-left: 5px;
+                    color: $white;
+                    // background-color: $black;
+
+                }
+
+                button {
+                    font-size: 20px;
+                    color: $black;
+                    background-color: $green1;
+                    width: 100%;
+                    padding: 14px 20px;
+                    margin: 8px 0;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    // font-weight: bold;
+                    // font-size: 24px;
+                }
+
+                button:hover {
+                    background-color: $green2;
+                }
+            }
+
+            .link {
+                color: $white; // Set the text color
+                // text-decoration: none; // Remove underline
+                // font-weight: bold; // Make the text bold
+
+                &:hover {
+                    //   color: $light_blue; // Change color on hover
+                    // text-decoration: none; // Underline on hover
+                    font-style: normal;
+                }
+            }
+
+            p {
+                color: $white;
+                font-style: italic;
+                font-size: 16px;
+                margin: 10px;
+
+
+            }
+
+
+            p a {
+                @extend .link;
+            }
+
+
+
+
+        }
+
+    }
+}
+
+/* Apply the mixin for login form */
+.login-form {
+    @include form-styling($blue); // Change background and button hover color for login form
+}
+
+/* Apply the mixin for register form */
+.register-form {
+    @include form-styling($pink1); // Change background and button hover color for register form
+}
+
+
+
+
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Full height of the viewport */
+    background-color: $white;
+
+    .container {
+        border: 1px solid black;
+        border-radius: 10px;
+        width: 65%;
+        height: 80%;
+        display: flex;
+        overflow: hidden;
+
+
+        // background-color: $pink1;
+        .sidebar {
+            overflow: auto;
+            white-space: nowrap;
+            flex: 1;
+            background-color: $dark-pink;
+
+
+            // border: 1px solid white;
+
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                background-color: $dark-purple;
+                font-size: 20px;
+                height: 40px;
+
+
+                .title {
+                    // font-size: 16px;
+                    color: $white;
+                    font-weight: bold;
+                }
+
+                .user {
+                    align-items: center;
+                    color: $white;
+                    display: flex;
+                    gap: 10px;
+                    font-size: 16px;
+
+                    img {
+                        background-color: $black;
+                        height: 25px;
+                        width: 25px;
+                        border-radius: 50%;
+                        object-fit: fill;
+                    }
+
+                    button {
+                        font-size: 10px;
+                        color: $black;
+                        background-color: $green1;
+                        // width: 24px;
+                        // height: 24px;
+                        padding: 7px 10px;
+                        // margin: 8px 0;
+                        // margin-left: 10px;
+                        border: none;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        // font-weight: bold;
+                        // font-size: 24px;
+                    }
+
+                    button:hover {
+                        background-color: $green2;
+                    }
+                }
+
+
+            }
+
+            .search-bar {
+                border-bottom: 1px solid $white;
+
+                .search-form {
+                    padding: 10px;
+
+                    input {
+                        background-color: transparent;
+                        border: 1px solid $white;
+                        color: $white;
+                        outline: none;
+
+                        width: 75%;
+
+                        &::placeholder {
+                            color: $white;
+                        }
+                    }
+                }
+
+                span.not-found {
+                    font-size: 16px;
+                    // padding-left: 5px;
+                    margin-left: 5px;
+                    color: $white;
+                    background-color: $black;
+                }
+            }
+
+            .user-chat {
+
+
+
+
+
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: $white;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $dark-purple;
+                }
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                .user-chat-info {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    span {
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        color: $light-grey;
+                    }
+                }
+            }
+
+        }
+
+        .chat {
+            flex: 2;
+            background-color: $dark-blue2;
+            border-left: 1px solid black;
+
+            .chat-info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                background-color: $dark-blue1;
+                font-size: 20px;
+                height: 40px;
+
+                span {
+                    color: $white;
+                }
+
+                .chat-icons {
+                    display: flex;
+                    gap: 10px;
+
+                    img {
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .messages {
+                // color: #99c9ff;
+                // color: $light-grey;
+                // background-color: $purple1;
+
+                // //this one chief
+                // color: $white;
+                // background-color: $blue;
+                padding: 10px;
+                height: 420px; //calc(100% - 160px);
+                overflow: scroll;
+                gap: 20px;
+
+                .message {
+                    display: flex;
+
+                    margin-bottom: 20px;
+
+                    .message-content {
+                        display: flex;
+                        gap: 5px;
+                        flex-direction: column;
+
+                        .message-time {
+                            color: $light-grey;
+                            font-size: 14px;
+                        }
+
+                        .message-text {
+                            font-size: 18px;
+                            background-color: $white;
+                            color: $black;
+                            padding: 10px 20px;
+                            border-radius: 0px 10px 10px 10px;
+                            max-width: max-content;
+                        }
+
+
+                    }
+
+                    &.owner {
+
+                        display: flex;
+                        flex-direction: row-reverse;
+
+                        .message-content {
+                            display: flex;
+                            gap: 5px;
+                            flex-direction: column;
+                            align-items: flex-end;
+
+                            .message-time {
+                                color: $light-grey;
+                                font-size: 14px;
+                            }
+
+                            .message-text {
+                                font-size: 18px;
+                                color: $white;
+                                background-color: $blue;
+                                border-radius: 10px 0px 10px 10px;
+
+                                padding: 10px 20px;
+
+                                max-width: max-content;
+                            }
+
+                        }
+
+
+                    }
+                }
+
+
+
+            }
+
+            // .messages2 {
+            //     // background-color: $light-grey;
+            //     background-color: $light-grey; //this one chief
+            //     color: $black; //this one chief
+            //     // background-color: $white;
+            //     padding: 10px;
+            //     height: calc(100% - 160px);
+            //     overflow: scroll;
+            // }
+
+
+
+            .chat-input {
+                height: 50px;
+                background-color: $light-grey;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                input {
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    font-size: 18px;
+                    background-color: $light-grey;
+                }
+
+                button {
+                    gap: 10px;
+                    border: none;
+                    padding: 10px 15px;
+                    color: $white;
+                    background-color: $blue;
+
+                }
+            }
+        }
+
+    }
+}

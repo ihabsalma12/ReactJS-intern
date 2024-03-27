@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Result Page</title>
+</head>
+
+<body>
+    <h1>Result</h1>
+    <div id="result"></div>
+    <script>
+        // Retrieve the result data passed as a variable
+        const result = "<%= result %>";
+
+        // Display the result in the result div
+        document.getElementById('result').innerText = "Addition - " + result;
+    </script>
+</body>
+
+</html>
